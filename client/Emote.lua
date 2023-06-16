@@ -131,8 +131,8 @@ Citizen.CreateThread(function()
                 { name = "emotename", help = "dance, camera, sit or any valid emote." } })
         TriggerEvent('chat:addSuggestion', '/emotebinds', 'Check your currently bound emotes.')
     end
-    TriggerEvent('chat:addSuggestion', '/emotemenu', 'Open rpemotes menu (F4) by default. This may differ from server to server.')
-    TriggerEvent('chat:addSuggestion', '/emotes', 'List available emotes.')
+    TriggerEvent('chat:addSuggestion', '/emotemenu', 'Open rpemotes menu.')
+    --TriggerEvent('chat:addSuggestion', '/emotes', 'List available emotes.')
     TriggerEvent('chat:addSuggestion', '/emotecancel', 'Cancel currently playing emote.')
     TriggerEvent('chat:addSuggestion', '/handsup', 'Put your arms up.')
 end)
@@ -144,12 +144,10 @@ if Config.SqlKeybinding then
     RegisterCommand('emotebinds', function(source, args, raw) EmoteBindsStart(source, args, raw) end, false)
 end
 if Config.MenuKeybindEnabled then
-    RegisterCommand('emoteui', function() OpenEmoteMenu() end, false)
-    RegisterKeyMapping("emoteui", "Open rpemotes menu", "keyboard", Config.MenuKeybind)
-else
     RegisterCommand('emotemenu', function() OpenEmoteMenu() end, false)
+    RegisterKeyMapping("emotemenu", "Open rpemotes menu", "keyboard", Config.MenuKeybind)
 end
-RegisterCommand('emotes', function() EmotesOnCommand() end, false)
+--RegisterCommand('emotes', function() EmotesOnCommand() end, false)
 RegisterCommand('emotecancel', function() EmoteCancel() end, false)
 if Config.HandsupEnabled then
     RegisterCommand('handsup', function()
