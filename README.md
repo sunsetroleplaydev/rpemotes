@@ -1,7 +1,12 @@
 # rpemotes
 Our custom emotes menu specified to the server's needs
 - [Original RPEmotes](https://github.com/TayMcKenzieNZ/rpemotes)
-  
+
+---
+
+## Preview
+<img src="https://i.imgur.com/8k7LVvP.png" width="auto" height="auto"> 
+
 ---
 
 ## Features 
