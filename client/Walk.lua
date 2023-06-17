@@ -20,14 +20,14 @@ function ResetWalk()
     ResetPedMovementClipset(PlayerPedId())
 end
 
-function WalksOnCommand(source, args, raw)
-    local WalksCommand = ""
-    for a in pairsByKeys(RP.Walks) do
-        WalksCommand = WalksCommand .. "" .. string.lower(a) .. ", "
-    end
-    EmoteChatMessage(WalksCommand)
-    EmoteChatMessage("To reset do /walk reset")
-end
+-- function WalksOnCommand(source, args, raw)
+--     local WalksCommand = ""
+--     for a in pairsByKeys(RP.Walks) do
+--         WalksCommand = WalksCommand .. "" .. string.lower(a) .. ", "
+--     end
+--     EmoteChatMessage(WalksCommand)
+--     EmoteChatMessage("To reset do /walk reset")
+-- end
 
 function WalkCommandStart(source, args, raw)
 
@@ -63,10 +63,10 @@ if Config.WalkingStylesEnabled and Config.PersistentWalk then
 end
 
 if Config.WalkingStylesEnabled then
-    RegisterCommand('walks', function() WalksOnCommand() end, false)
+    --RegisterCommand('walks', function() WalksOnCommand() end, false)
     RegisterCommand('walk', function(source, args, raw) WalkCommandStart(source, args, raw) end, false)
     TriggerEvent('chat:addSuggestion', '/walk', 'Set your walkingstyle.', { { name = "style", help = "/walks for a list of valid styles" } })
-    TriggerEvent('chat:addSuggestion', '/walks', 'List available walking styles.')
+    --TriggerEvent('chat:addSuggestion', '/walks', 'List available walking styles.')
 end
 
 function toggleWalkstyle(bool, message)
