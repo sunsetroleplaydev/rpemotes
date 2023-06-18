@@ -16,8 +16,8 @@
 -- end
 
 _menuPool = NativeUI.CreatePool()
-mainMenu = NativeUI.CreateMenu("Emotes Menu" or "", 'Main Menu', 1320)
-mainMenu:SetMenuWidthOffset(60)
+mainMenu = NativeUI.CreateMenu("Emotes Menu", 'Main Menu', 1362)
+mainMenu:SetMenuWidthOffset(69)
 _menuPool:Add(mainMenu)
 
 local EmoteTable = {}
