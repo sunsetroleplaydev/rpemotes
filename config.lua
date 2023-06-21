@@ -87,9 +87,7 @@ Config = {
     -- If set to true, you'll be able to toggle between different vision modes in the binoculars
     AllowVisionsToggling = true,
     -- If set to true, the /newscam command will be enabled.
-    NewscamEnabled = true,
-    -- Check for updates
-    CheckForUpdates = true,
+    NewscamEnabled = true
 }
 
 Config.KeybindKeys = {
