@@ -131,8 +131,8 @@ Citizen.CreateThread(function()
                 { name = "emotename", help = "dance, camera, sit or any valid emote." } })
         TriggerEvent('chat:addSuggestion', '/emotebinds', 'Check your currently bound emotes.')
     end
-    TriggerEvent('chat:addSuggestion', '/emotemenu', 'Open rpemotes menu.')
-    --TriggerEvent('chat:addSuggestion', '/emotes', 'List available emotes.')
+    TriggerEvent('chat:addSuggestion', '/emotemenu', 'Open emotes menu.')
+    TriggerEvent('chat:addSuggestion', '/emotes', 'Open emotes menu.')
     TriggerEvent('chat:addSuggestion', '/emotecancel', 'Cancel currently playing emote.')
     TriggerEvent('chat:addSuggestion', '/handsup', 'Put your arms up.')
 end)
@@ -147,7 +147,7 @@ if Config.MenuKeybindEnabled then
     RegisterCommand('emotemenu', function() OpenEmoteMenu() end, false)
     RegisterKeyMapping("emotemenu", "Open rpemotes menu", "keyboard", Config.MenuKeybind)
 end
---RegisterCommand('emotes', function() EmotesOnCommand() end, false)
+RegisterCommand('emotes', function() OpenEmoteMenu() end, false)
 RegisterCommand('emotecancel', function() EmoteCancel() end, false)
 if Config.HandsupEnabled then
     RegisterCommand('handsup', function()
